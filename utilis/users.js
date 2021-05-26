@@ -4,11 +4,12 @@ const users = [];
 //Join user to the chat
 function userJoin(id, username, room) {
 	const user = { id, username, room };
-
+	// console.log(user.id);
 	users.push(user);
 
 	return user;
 }
+
 
 //Get the current user
 

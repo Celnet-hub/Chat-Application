@@ -11,7 +11,7 @@ const { username, room } = Qs.parse(location.search, {
 const socket = io();
 
 //Join chatroom
-socket.emit("joinRoom", { username, room });
+socket.emit("joinRoom", { username, room }); //listened from server.js '''socket.on('joinRoom', ())
 
 //Get room and users (Bug fixed)
 socket.on("roomUsers", ({ room, users }) => {
@@ -21,7 +21,7 @@ socket.on("roomUsers", ({ room, users }) => {
 
 // Message from server
 socket.on("message", (message) => {
-	console.log(message);
+	// console.log(message);
 	outputMessage(message);
 
 	// Scroll down

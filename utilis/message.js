@@ -8,4 +8,5 @@ function formatMessage(username, text) {
 	};
 }
 
+//exported to server.js
 module.exports = formatMessage;

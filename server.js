@@ -27,11 +27,12 @@ io.on("connection", (socket) => {
 
 		socket.join(user.room);
 
-		//Welcome current user
-		socket.emit("message", formatMessage(botName, "Welcome to the chat bot"));
+		//Welcomes current user
+		socket.emit("message", formatMessage(botName,  `Welcome to the ${user.room} room`));
 
 		//Broadcast when a user connects
-		socket.broadcast
+		
+		socket.broadcast //broadcasts to all users except the user emitting the message. 
 			.to(user.room)
 			.emit(
 				"message",

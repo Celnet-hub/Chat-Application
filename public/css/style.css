@@ -40,6 +40,9 @@ a {
 
 /* Chat Page */
 
+#users {
+	text-transform: capitalize;
+}
 .chat-container {
 	max-width: 1100px;
 	background: #fff;
@@ -72,6 +75,7 @@ a {
 
 .chat-sidebar h2 {
 	font-size: 20px;
+	text-transform: capitalize;
 	background: rgba(0, 0, 0, 0.1);
 	padding: 10px;
 	margin-bottom: 20px;
@@ -101,6 +105,7 @@ a {
 .chat-messages .message .meta {
 	font-size: 15px;
 	font-weight: bold;
+	text-transform: capitalize;
 	color: var(--dark-color-b);
 	opacity: 0.7;
 	margin-bottom: 7px;
